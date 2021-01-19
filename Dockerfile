@@ -7,7 +7,9 @@ RUN apk update && apk add python g++ make && rm -rf /var/cache/apk/*
 
 # Install node dependencies - done in a separate step so Docker can cache it
 COPY package*.json ./
+COPY static ./static
 RUN npm install
+RUN npm audit fix
 
 # Copy project files into the image
 COPY . .

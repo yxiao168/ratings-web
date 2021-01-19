@@ -45,13 +45,26 @@ To build this sample locally, you can either build using Docker, or using NPM.
 
 ## Setup
 
-- To build using Docker, in the project folder, run `docker build -t ratings-web .`
-- To build using NPM, in the project folder, run `npm install`
+- To build using Docker, in the project folder, run 
+```
+$ docker build -t ratings-web .
+```
+- To build using NPM, in the project folder, run 
+```
+$ npm install
+```
 
 ## Running the sample
 
-- To run using Docker, run `docker run -it -p 8080:8080 ratings-web`
-- To run using NPM, run `npm start`
+- To run using Docker, run 
+```
+$ docker run -it -p 8080:8080 ratings-web -e API=http://127.0.0.1:3000
+
+```
+- To run using NPM, run 
+```
+$ npm start
+```
 
 Required configuration via environment variables:
 
